@@ -1,0 +1,8 @@
+1638211377606	geckodriver	INFO	Listening on 127.0.0.1:46453
+1638211377612	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOjQWbR"
+1638211380021	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileOjQWbR/search.json.mozlz4", (void 0)))
+1638211383248	Marionette	INFO	Listening on port 33767
+1638211383350	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+1638211396013	Marionette	INFO	Stopped listening on port 33767
