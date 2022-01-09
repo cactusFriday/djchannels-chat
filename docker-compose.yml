@@ -1,0 +1,33 @@
+version: "3.1"
+
+services:
+  db:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_DB: chat_djchannels
+      POSTGRES_USER: cactus
+      POSTGRES_PASSWORD: 123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+  
+  app:
+    build: .
+    ports: 
+      - "8000:8000"
+    volumes: 
+      - .:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+    #       sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    
+    # environment:
+    #   DB_HOST: db
+    #   DB_NAME: chat_djchannels
+    #   DB_USER: cactus
+    #   DB_PASS: 123
+    depends_on: 
+      - db
+volumes:
+  postgres_data:
+  # redis:
+  #   image: redis:alpine

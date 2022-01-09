@@ -81,8 +81,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'chat_djchannels',
         'USER': 'cactus',
-        'PASSWORD': '',
-        'HOST': '',
+        # 'USER': 'postgres',
+        # 'PASSWORD': '',
+        'PASSWORD': '123',
+        # 'HOST': '',
+        # Docker service
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
